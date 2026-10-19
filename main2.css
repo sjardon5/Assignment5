@@ -22,6 +22,7 @@ body {
     margin: auto;
     border: 3px solid var(--primary-color);
 }
+
 header, section, aside, footer { padding: 1em; }
 h1, h2, h3, p, article { padding-bottom: .5em; }
 h1 { font-size: 150%; }
@@ -38,65 +39,68 @@ header {
 		var(--light) 50%, 
 		var(--light-accent) 75%, 
 		var(--accent-color) 100%);
-	& h2 {
-		font-size: 175%;
-		color: var(--primary-color);
-		padding-bottom: 0;
-	}
-	& h3 {
-		font-size: 130%;
-		font-style: italic;
-	}
-	& img {
-		float: left;
-		
-	}
+}
+
+header h2 {
+	font-size: 175%;
+	color: var(--primary-color);
+	padding-bottom: 0;
+}
+
+header h3 {
+	font-size: 130%;
+	font-style: italic;
+}
+
+header img {
+	float: left;
 }
 
 /* the styles for the main element */
 main {
 	display: flex;
 	clear: left;
+	align-items: flex-start;
 }
 
 /* the styles for the aside */
 aside {
-	flex-basis: 35%;
-	
-	& h2 {
-		color: var(--primary-color);
-		
-	}
-	& img {
-		margin-bottom: .9em;
-		
-	}
+	flex: 0 0 30%;
+	margin-right: 1.5em;
+	order: -1;
+}
+
+aside h2 {
+	color: var(--primary-color);
+}
+
+aside img {
+	display: block;
+	margin-bottom: .9em;
 }
 
 /* the styles for the section */
 section {
-	& h1 {
+	flex: 1;
+}
+
+section h1 {
 	color: var(--primary-color);
-	flex-basis: 75%;
 	margin-left: 20px;
-	}
 }
 
 /* the styles for the article */
-article {
-	& img {
-		border: 1px solid var(--dark);
-	}
+article img {
+	border: 1px solid var(--dark);
 }
-
-
 
 /* the styles for the footer */
 footer {
 	background-color: var(--primary-color);
-	& p {
-		text-align: center;
-		color: white;
-		padding-bottom: 0; 
-	}
+}
+
+footer p {
+	text-align: center;
+	color: white;
+	padding-bottom: 0;
 }
