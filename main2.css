@@ -13,12 +13,6 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-.row {
-	display: flex;
-}
-.column{
-	flex:1 1 50%;
-}
 /* the default styles for the elements */
 body {
 	font-family: Arial, Helvetica, sans-serif;
@@ -56,11 +50,13 @@ header {
 		float: left;
 	}
 }
-
+.row {
+	flex-direction: column;
+}
 /* the styles for the main element */
 main {
 	display: flex;
-	clear: left;
+	clear: none;
 	margin-left: 250px;
 	padding: 20px;
 }
@@ -71,9 +67,10 @@ aside {
 	float: left;
 	width: 250px;
 	padding: 20px;
+	
+	
 	& h2 {
-		color: var(--primary-color);
-		
+		color: var(--primary-color);		
 	}
 	& img {
 		margin-bottom: .9em;
@@ -98,8 +95,6 @@ article {
 	}
 }
 
-
-
 /* the styles for the footer */
 footer {
 	background-color: var(--primary-color);
@@ -109,3 +104,4 @@ footer {
 		padding-bottom: 0; 
 	}
 }
+
